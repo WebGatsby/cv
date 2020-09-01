@@ -8,7 +8,7 @@ import datetime
 
 
 def find_match_in_oddsfan(browser, bet_to_place):
-    check_fuck = 5
+    check = 5
     browser.get('https://www.oddsfan.ru/')
     time.sleep(5)
 
@@ -64,9 +64,9 @@ def find_match_in_oddsfan(browser, bet_to_place):
             time.sleep(5)
             browser.get(browser.current_url.replace('ru', 'en'))
             time.sleep(5)
-            check_fuck = 0
+            check = 0
             break
-    if check_fuck != 0:
+    if check != 0:
         return -1
 
 
